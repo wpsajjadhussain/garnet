@@ -1,0 +1,17 @@
+/*!
+Theme Name: Garnet
+Theme URI: https://troontechnologies.com/
+Author: Troon Technologies
+Author URI: Troon Technologies
+Description: Description
+Version: 1.0
+Tested up to: 6.4
+Requires PHP: 8
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: garnet
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+*/
+body.admin-bar .site-header.fixed {
+  top: 32px;
+}

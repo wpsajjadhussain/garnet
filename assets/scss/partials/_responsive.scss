@@ -1,0 +1,221 @@
+// Main Responsive Stylesheet
+@media only screen and (min-width: 2400px) {
+}
+@media only screen and (min-width: 1900px) {
+}
+
+@media (min-width: 1440px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1300px;
+  }
+}
+
+// lg min
+@media only screen and (max-width: 1024px) {
+  .site-navigation {
+    ul#primary-menu {
+      gap: 1rem;
+    }
+  }
+  .hero-section {
+    padding: 8rem 0 7rem;
+  }
+  .site-footer {
+    .toprow {
+      padding: 9.8rem 0 5rem;
+    }
+    .bottom-row {
+      .--menufooter {
+        ul {
+          justify-content: start;
+        }
+      }
+      .--powered p {
+        justify-content: start;
+      }
+      .--copyright,
+      .--menufooter,
+      .--powered {
+        margin-top: 1rem;
+      }
+    }
+
+    .logoFooter {
+      margin: 2rem 0;
+    }
+  }
+}
+
+// max 991px
+@media only screen and (max-width: 991px) {
+  .hero-section {
+    padding: 4rem 0 4rem;
+    .hero__content {
+      max-width: 100%;
+      h1 {
+        margin-bottom: 1.6rem;
+      }
+    }
+    .hero__cta {
+      margin-top: 1.6rem;
+    }
+    figure {
+      margin-top: 4rem;
+    }
+  }
+
+  // Site Navigation
+  .site-navigation {
+    ul#primary-menu {
+      li {
+        &:hover {
+          .arrow {
+            svg {
+              transform: unset;
+            }
+          }
+        }
+        &.current-menu-ancestor {
+          border-bottom: 2px solid var(--Green-Main) !important;
+        }
+        &.current-menu-parent > a:after {
+          display: none;
+        }
+      }
+    }
+  }
+  // Header
+  .site-header {
+    &.fixed {
+      .menu-toggle {
+        position: absolute;
+        // top: 2.8rem;
+        svg {
+          path {
+            stroke: var(--black);
+          }
+        }
+      }
+    }
+  }
+  .site-navigation {
+    .menu-toggle {
+      position: absolute;
+      right: 1rem;
+      top: 050%;
+      display: block;
+      background: transparent;
+      transform: translateY(-50%);
+    }
+    &.toggled {
+      .main-navigation {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 0;
+        border-radius: 1rem;
+        width: 100%;
+        min-height: unset;
+        left: 0;
+        display: block;
+      }
+    }
+    .main-navigation {
+      display: none;
+      ul#primary-menu {
+        background-color: var(--white);
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        top: 4.8rem;
+        width: 100%;
+        gap: 0;
+        padding-bottom: 2rem;
+        li {
+          width: 100%;
+          padding: 1rem 2rem;
+          border-bottom: 1px solid var(--Grey-40);
+          &.current-menu-item {
+            border-bottom: 2px solid var(--Green-Main);
+            > a:after {
+              display: none;
+            }
+          }
+          a {
+            color: var(--Grey-Main);
+          }
+          // Sub menu
+          ul.sub-menu {
+            background: var(--Grey-20);
+            top: 6rem;
+            li {
+              border: unset;
+            }
+          }
+          .arrow {
+            svg {
+              path {
+                stroke: var(--black);
+              }
+            }
+          }
+        }
+      }
+      &.show {
+        display: block;
+      }
+    }
+  }
+
+  // Site Footer
+  .site-footer {
+    .col-lg-8 {
+      order: -1 !important;
+    }
+    .col-lg-3 {
+      order: 5 !important;
+    }
+
+    .middle-content {
+      padding-bottom: 0;
+      p {
+        margin: 0;
+      }
+    }
+    .text-center {
+      text-align: left !important;
+    }
+  }
+}
+
+// Mobile
+@media only screen and (max-width: 767px) {
+  html {
+    body {
+      .h1,
+      h1 {
+        font-size: 3.8rem;
+        line-height: 4.2rem;
+      }
+      .h2,
+      h2 {
+        font-size: 3.4rem;
+        line-height: 4rem;
+      }
+      .h3,
+      h3 {
+        font-size: 2.8rem;
+        line-height: 3.8rem;
+      }
+    }
+  }
+  .hero-section {
+  }
+  // end 767
+}
